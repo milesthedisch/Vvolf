@@ -1,5 +1,7 @@
 .container-logo {
-    @extend %vertical-align;
-    width: 20%;
     float: left;
+}
+
+.logo {
+	height: 60px;
 }

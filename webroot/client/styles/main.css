@@ -153,7 +153,7 @@
   display: table;
 }
 
-.navigation, .container-logo {
+.navigation {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1239,8 +1239,11 @@ body.modal-visible #global-overlay.fullscreen .table .td .modal {
 }
 
 .container-logo {
-  width: 20%;
   float: left;
+}
+
+.logo {
+  height: 60px;
 }
 
 /*# sourceMappingURL=main.css.map */
