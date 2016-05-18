@@ -1,0 +1,15 @@
+.scroll {
+  position: relative;
+  top: 90%;
+  margin: 0 auto 20px auto;
+  width: 2em;
+  height: 2em;
+  background: black;
+  box-shadow: 3px 3px 0px 1px white;
+  border-radius: 50%;
+  // animation: -dimAndShrink 800ms cubic-bezier(.87,.41,.19,.9) forwards;
+  transform: rotateY(0deg) translateY(-90%) translateZ(0);
+  &:hover {
+    animation: glowAndExpand 800ms cubic-bezier(.87,.41,.19,.9) forwards;
+  }
+}

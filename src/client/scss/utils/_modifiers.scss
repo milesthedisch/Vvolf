@@ -1,0 +1,70 @@
+// Colour modifiers
+.-white {
+    color: $WHITE;
+}
+
+.-light-grey {
+    color: $LIGHT-GREY;
+}
+
+.-dark-grey {
+    color: $DARK-GREY;
+}
+
+.-black {
+    color: $BLACK;
+}
+
+// Transition modifiers
+.-fade-in {
+    animation: fadeIn 0.3s forwards;
+}
+
+.-fade-out {
+    animation: fadeOut 0.3s forwards;
+}
+
+// Visibility modifiers
+.-hidden {
+    display: none !important;
+}
+
+.-landscape-only {
+    @media (orientation: portrait) {
+        display: none;
+    }
+}
+
+.-portrait-only {
+    @media (orientation: landscape) {
+        display: none;
+    }
+}
+
+// Orientation modifiers
+&.-rotate180 {
+    transform-origin: center center;
+    transform: rotateZ(180deg);
+}
+
+&.-rotateNegative180 {
+    transform-origin: center center;
+    transform: rotateZ(-180deg);
+}
+
+&.-rotate90 {
+    transform-origin: center center;
+    transform: rotateZ(90deg);
+}
+
+&.-rotateNegative90 {
+    transform-origin: center center;
+    transform: rotateZ(-90deg);
+}
+
+.-dimAndShrink {
+    animation: dimAndShrink;
+    animation-fill-mode: forwards;
+    animation-duration: 800ms;
+    animation-timing-function: cubic-bezier(.2, .5, .3, .9);
+}

@@ -1,0 +1,10 @@
+.logo {
+    width: 2.5em;
+    float: left;
+}
+
+.container-logo {
+    @extend %vertical-align;
+    width: 20%;
+    float: left;
+}

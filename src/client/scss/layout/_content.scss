@@ -1,0 +1,11 @@
+.content-center {
+	-webkit-font-smoothing: antialiased !important;
+    left: 50%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    top: 60%;
+    transform: translate(-50%, -60%);
+}

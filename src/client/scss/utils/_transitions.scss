@@ -1,0 +1,120 @@
+/**
+ * Utils: Transitions
+ */
+
+@keyframes rotateToNormal {
+    to {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(30);
+    }
+}
+
+@keyframes rotateClockwise {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes rotateAntiClockwise {
+	to {
+		transform: rotateZ(-360deg);
+	}
+}
+
+@keyframes rotate180ClockwiseDelay {
+    80% {
+        transform: rotateZ(180deg);
+    }
+
+    to {
+        transform: rotateZ(180deg);
+    }
+}
+
+@keyframes rotate180AntiClockwiseDelay {
+    80% {
+        transform: rotateZ(-180deg);
+    }
+
+    to {
+        transform: rotateZ(-180deg);
+    }
+}
+
+@keyframes rotateOnX {
+    from {
+        transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(-45deg) rotateZ(10deg) rotateY(25deg);
+    }
+}
+
+@keyframes glowAndExpand {
+    0% {
+        box-shadow: 3px 3px 0px 1px white;
+        transform: scale(1) translateZ(0) scale(1.0, 1.0) translateY(-90%);
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0) translateY(-90%);
+    }
+    40% {
+        box-shadow: 0px 0px 10px 2px rgba(200,200,200,1); 
+        transform: scale(1) translateZ(0) scale(1.0, 1.0) translateY(-90%);
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0) translateY(-90%);
+    }
+    100% {
+        box-shadow: 0px 0px 1px 2000px rgba(255,255,255,1); 
+        transform: scale(1) translateZ(0) scale(1.0, 1.0) translateY(-90%);
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0) translateY(-90%);
+    }
+}
+
+@keyframe dimAndShrink {
+    0% {
+        box-shadow: 0px 0px 1px 2000px rgba(255,255,255,1); 
+        transform: scale(1) translateZ(0) scale(1.0, 1.0) translateY(-90%);
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0) translateY(-90%);
+    }
+    40% {
+        box-shadow: 0px 0px 10px 2px rgba(200,200,200,1); 
+        transform: scale(1) translateZ(0) scale(1.0, 1.0) translateY(-90%);
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0) translateY(-90%);
+    }
+    100% {
+        box-shadow: 3px 3px 0px 1px white;
+        transform: scale(1) translateZ(0) scale(1.0, 1.0) translateY(-90%);
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0) translateY(-90%);
+    } 
+}
+

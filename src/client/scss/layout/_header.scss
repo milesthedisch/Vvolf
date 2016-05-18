@@ -1,0 +1,37 @@
+/**
+ * Layout: Header
+ */
+
+.header,
+%header {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.header-top {
+    height: 70px;
+}
+
+.header-content {
+    @extend %header;
+}
+
+.header-main {
+    font-size: 3em;
+    letter-spacing: 100px;
+    padding-left: 10.5%;
+    margin: 0 auto;
+    width: 95%;
+    @include breakpoint (default) {
+        font-size: 3em;
+        width: 95%;
+        margin: 0 auto;
+        padding-left: 3.5%;
+        letter-spacing: 60px;
+    }
+    @include breakpoint (tablet) {
+        font-size: 8em;
+        padding-left: 5.5%;
+        letter-spacing: 100px;
+    }
+}

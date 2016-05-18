@@ -1,0 +1,14 @@
+.card-one {
+	.secondary-header {
+		&:after {
+			content: 'kill.';
+			color: red;
+		}
+	}
+}
+
+.card-two {
+	.block-quote {
+		border: 1px solid blue;
+	}
+}

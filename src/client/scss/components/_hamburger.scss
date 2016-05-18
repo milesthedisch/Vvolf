@@ -1,0 +1,67 @@
+.container-hamburger {
+    float: right;
+    padding-bottom: 20px;
+    .hamburger {
+        color: white;
+        background-color: #fff;
+        display: inline-block;
+        width: 23px;
+        position: relative;
+        top: 18px;
+        background: #ffffff;
+        -webkit-transition: all ease .3s;
+        -moz-transition: all ease .3s;
+        -o-transition: all ease .3s;
+        transition: all ease .3s;
+
+        &:after, &:before {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 23px;
+            height: 1px;
+            transition: all ease .3s;
+            outline: 1px solid transparent;
+            left: 0;
+            background: #ffffff;
+        } 
+
+        &:before {
+            top: -8px;
+        }
+
+        &:after {
+            top: 8px;
+        }
+    }
+}
+
+
+.items-visible {
+    .navigation {
+        @for $i from 1 through 5 {
+            .fade#{$i} {
+                display: inline-block;
+                opacity: 1;
+                transition-property: opacity;
+                transition-delay: ($i * 100)#{ms};
+                transition-duration: ($i * 100 + 10)#{ms};
+                transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1.0, 1.0);
+            } 
+        }
+    }
+    .container-hamburger {
+        .hamburger {
+           background-color: transparent;
+           &:after {
+                transform: translateY(-8px) rotateZ(45deg);
+           }
+           &:before {
+                transform: translateY(8px) rotateZ(-45deg);
+           }
+        }
+    }    
+}
+
