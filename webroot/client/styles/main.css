@@ -731,7 +731,6 @@ html, body {
 .header-main {
   font-size: 3em;
   letter-spacing: 100px;
-  padding-left: 10.5%;
   margin: 0 auto;
   width: 95%;
 }
@@ -739,9 +738,14 @@ html, body {
 @media (min-width: 0em) {
   .header-main {
     font-size: 3em;
-    width: 95%;
-    margin: 0 auto;
-    padding-left: 3.5%;
+    letter-spacing: 60px;
+  }
+}
+
+@media (min-width: 30em) {
+  .header-main {
+    font-size: 5em;
+    width: 80%;
     letter-spacing: 60px;
   }
 }
@@ -749,7 +753,13 @@ html, body {
 @media (min-width: 48em) {
   .header-main {
     font-size: 8em;
-    padding-left: 5.5%;
+    letter-spacing: 100px;
+  }
+}
+
+@media (min-width: 64em) {
+  .header-main {
+    font-size: 9em;
     letter-spacing: 100px;
   }
 }
