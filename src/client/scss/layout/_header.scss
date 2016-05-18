@@ -17,25 +17,25 @@
 }
 
 .header-main {
-    font-size: 3em;
+    font-size: 8vw;
     letter-spacing: 100px;
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
+    padding-left: 5%;
     @include breakpoint (default) {
-        font-size: 3em;
         letter-spacing: 60px;
+        padding-left: 11%;
     }
     @include breakpoint (phablet) {
-        font-size: 5em;
-        width: 80%;
         letter-spacing: 60px;
+         padding-left: 8%;
     }
     @include breakpoint (tablet) {
-        font-size: 8em;
         letter-spacing: 100px;
+         padding-left: 5%;
     }
     @include breakpoint (laptop) {
-        font-size: 9em;
         letter-spacing: 100px;
+         padding-left: 5%;
     }
 }
