@@ -21,21 +21,25 @@
     letter-spacing: 100px;
     margin: 0 auto;
     width: 100%;
-    padding-left: 5%;
+    padding-left: 5.5%;
     @include breakpoint (default) {
-        letter-spacing: 60px;
+        letter-spacing: 40px;
         padding-left: 11%;
+        font-weight: 400;
     }
     @include breakpoint (phablet) {
         letter-spacing: 60px;
-         padding-left: 8%;
+        padding-left: 8%;
+        font-weight: 400;
     }
     @include breakpoint (tablet) {
         letter-spacing: 100px;
-         padding-left: 5%;
+        padding-left: 5%;
+        font-weight: 200;
     }
     @include breakpoint (laptop) {
         letter-spacing: 100px;
-         padding-left: 5%;
+        padding-left: 5.5%;
+        font-weight: 200;
     }
 }

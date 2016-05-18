@@ -1,7 +1,7 @@
 .container-hamburger {
     float: right;
     padding-bottom: 20px;
-    padding-right: 10px;
+    padding-right: 6px;
     .hamburger {
         color: white;
         background-color: #fff;
@@ -39,34 +39,49 @@
 
 
 .items-visible {
-    .navigation {
-        @for $i from 1 through 5 {
-            .fade#{$i} {
-                display: inline-block;
-                opacity: 1;
-                transition-property: opacity;
-                transition-delay: ($i * 100)#{ms};
-                transition-duration: ($i * 100 + 10)#{ms};
-                transition-timing-function: cubic-bezier(.25,.46,.45,.94);
-                -webkit-backface-visibility: hidden;
-                -webkit-transform: translateZ(0) scale(1.0, 1.0);
-            } 
-        }
-    }
-    .container-hamburger {
-        .hamburger {
-           background-color: transparent;
-           &:after {
-                transform: translateY(-8px) rotateZ(45deg);
-           }
-           &:before {
-                transform: translateY(8px) rotateZ(-45deg);
-           }
-        }
-    } 
 
-    @include breakpoint () {
-        
+    .navigation {
+            @for $i from 1 through 5 {
+                .fade#{$i} {
+                    display: inline-block;
+                    opacity: 1;
+                    transition-property: opacity, transform;
+                    transition-delay: ($i * 100)#{ms};
+                    transition-duration: ($i * 100 + 10)#{ms};
+                    transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+                    -webkit-backface-visibility: hidden;
+                    transform: translateZ(0) scale(1.0, 1.0) transformY(10%);
+                    -webkit-transform: translateZ(0) scale(1.0, 1.0) transformY(10%);
+                } 
+            }
+    }
+
+    @include breakpoint (laptop) {
+        .navigation {
+            @for $i from 1 through 5 {
+                .fade#{$i} {
+                    display: inline-block;
+                    opacity: 1;
+                    transition-property: opacity;
+                    transition-delay: ($i * 100)#{ms};
+                    transition-duration: ($i * 100 + 10)#{ms};
+                    transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+                    -webkit-backface-visibility: hidden;
+                    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+                } 
+            }
+        }
+        .container-hamburger {
+            .hamburger {
+               background-color: transparent;
+               &:after {
+                    transform: translateY(-8px) rotateZ(45deg);
+               }
+               &:before {
+                    transform: translateY(8px) rotateZ(-45deg);
+               }
+            }
+        } 
     }   
 }
 
