@@ -1,19 +1,14 @@
 /**
  * Layout: Header
- */
-
-.header,
-%header {
-    text-align: left;
-    margin: 0 auto;
-}
-
+ */ 
+ 
 .header-top {
     height: 70px;
-}
-
-.header-content {
-    @extend %header;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .header-main {

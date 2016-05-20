@@ -1,5 +1,7 @@
 .container-logo {
-    float: left;
+    display: inline-flex;
+    flex-grow:1;
+    order: 1;
 }
 
 .logo {
