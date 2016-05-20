@@ -1,13 +1,18 @@
 .container-hamburger {
+    padding-top: 10px;
     display: inline-flex;
+    align-self: auto;
     order: 3;
+    a {
+        display: flex;
+    }
     .hamburger {
         color: white;
         background-color: #fff;
-        display: inline-block;
         width: 23px;
         position: relative;
         top: 18px;
+        height: 1px;
         background: #ffffff;
         -webkit-transition: all ease .3s;
         -moz-transition: all ease .3s;
@@ -43,17 +48,27 @@
         .navigation {
             @for $i from 1 through 5 {
                 .fade#{$i} {
-                    display: inline-block;
-                    opacity: 0.2;
+                    opacity: 1;
                     transition-property: opacity, transform;
                     transition-delay: ($i * 100)#{ms};
                     transition-duration: ($i * 100 + 10)#{ms};
                     transition-timing-function: cubic-bezier(.25,.46,.45,.94);
                     -webkit-backface-visibility: hidden;
-                    transform: translateZ(0) scale(1.0, 1.0) transformY(10%);
-                    -webkit-transform: translateZ(0) scale(1.0, 1.0) transformY(10%);
+                    transform: translateZ(0) scale(1.0, 1.0);
+                    -webkit-transform: translateZ(0) scale(1.0, 1.0);
                 } 
             }
+        .container-hamburger {
+            .hamburger {
+               background-color: transparent;
+               &:after {
+                    transform: translateY(-8px) rotateZ(45deg);
+               }
+               &:before {
+                    transform: translateY(8px) rotateZ(-45deg);
+               }
+            }
+        } 
         }
     }
 
@@ -62,7 +77,6 @@
         .navigation {
             @for $i from 1 through 5 {
                 .fade#{$i} {
-                    display: inline-block;
                     opacity: 1;
                     transition-property: opacity;
                     transition-delay: ($i * 100)#{ms};

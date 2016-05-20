@@ -3,12 +3,13 @@
  */ 
  
 .header-top {
-    height: 70px;
+    align-items: start;
     display: inline-flex;
     flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
     flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    vertical-align: 
 }
 
 .header-main {
